@@ -78,11 +78,21 @@ Aşağıdakileri yapmak için cesitEkle işlevini kullanın:
 */
 
 
+function cesitEkle(orijinalTatlar,string){
+
+  orijinalTatlar.unshift(string);
+  return  orijinalTatlar;
+
+}
+console.log("KAKULE EKLENDİ",cesitEkle(orijinalTatlar,"Kakule"));
+/*
 function cesitEkle(orijinalTatlar){
 orijinalTatlar.unshift("Kakule");
-return  orijinalTatlar.slice();
+return  orijinalTatlar;
 }
 console.log("KAKULE EKLENDİ",cesitEkle(orijinalTatlar));
+*/
+
 
 /* Cörev 4:
 

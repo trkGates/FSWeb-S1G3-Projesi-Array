@@ -42,9 +42,10 @@ Aşağıdakileri yapmak için aşağıdaki kopyalama işlevini kullanın:
 */
 
 
-function kopyala(/*kod buraya*/){
-  /*kod buraya*/
+function kopyala(orijinalTatlar){
+  return orijinalTatlar;
 }
+console.log(kopyala(orijinalTatlar));
 
 
 /* Görev 2:
@@ -58,9 +59,10 @@ Bir dizinin tam olarak 25 çeşit olduğunu onaylayın. İşleviniz şunları ka
 */
 
 
-function dizi25Cesitmi(/*kod buraya*/){
-  /*kod buraya*/
+function dizi25Cesitmi(orijinalTatlar){
+  return orijinalTatlar.length === 25;
 }
+console.log(dizi25Cesitmi(orijinalTatlar));
 
 
 /* Görev 3:
@@ -76,10 +78,11 @@ Aşağıdakileri yapmak için cesitEkle işlevini kullanın:
 */
 
 
-function cesitEkle(/*kod buraya*/){
-  /*kod buraya*/
+function cesitEkle(orijinalTatlar){
+orijinalTatlar.unshift("Kakule");
+return  orijinalTatlar.slice();
 }
-
+console.log("KAKULE EKLENDİ",cesitEkle(orijinalTatlar));
 
 /* Cörev 4:
 
@@ -94,10 +97,11 @@ Aşağıdakileri yapmak için sonCesitiKaldir işlevini kullanın:
 */
 
 
-function sonCesitiKaldir(/*kod buraya*/){
-  /*kod buraya*/
+function sonCesitiKaldir(orijinalTatlar){
+  orijinalTatlar.pop();
+  return  orijinalTatlar.slice();
 }
-
+console.log("EN SONUNCU SİLİNDİ",sonCesitiKaldir(orijinalTatlar))
 
 /* Görev 5:
 Dizideki belirli bir indeksteki çeşniyi döndüren bir işlev yazın.
@@ -110,9 +114,10 @@ Aşağıdakileri yapmak için aşağıdaki indekstekiCesitiGetir işlevini kulla
    Örneğin: indekstekiCesitiGetir(orijinalTatlar, 2) çalıştırılmasıyla, Kakule'in başarıyla eklendiği varsayarsak sonuç "Ceviz" olucaktır.
 */
 
-function indekstekiCesitiGetir(/*kod buraya*/){
-  /*kod buraya*/
+function indekstekiCesitiGetir(orijinalTatlar,index){
+  return orijinalTatlar[index];
 }
+console.log(indekstekiCesitiGetir(orijinalTatlar,2)," ------------ GÖREV 5 SORUSU");
 
 
 /* Görev 6:
@@ -130,10 +135,12 @@ Aşağıdakileri yapmak için ismeGoreCesitCikar işlevini kullanın:
   İPUCU: Bunun için .splice() kullanabilirsiniz.
 */
 
-function ismeGoreCesitCikar(/*kod buraya*/){
-  /*kod buraya*/
-}
+function ismeGoreCesitCikar(orijinalTatlar,item){
 
+    orijinalTatlar.splice(orijinalTatlar.indexOf(item),1);
+    return orijinalTatlar;
+}
+console.log("GÖREV 6 LİSTEDEN ELEMAN SİLME",ismeGoreCesitCikar(orijinalTatlar,"Tarçın"));
 
 /* Görev 7:
 
@@ -156,9 +163,17 @@ Aşağıdakileri yapmak için ismeGoreFiltrele işlevini kullanın:
 */
 
 
-function ismeGoreFiltrele(/*kod buraya*/){
-  /*kod buraya*/
+function ismeGoreFiltrele(orijinalTatlar,aranan) {
+  const bulunanTatlar = [];
+  for (let i = 0; i < orijinalTatlar.length; i++) {
+    if (orijinalTatlar[i].includes(aranan)) {
+      bulunanTatlar.push(orijinalTatlar[i]);
+    }
+  } 
+  console.log(bulunanTatlar);
+  return bulunanTatlar;
 }
+ismeGoreFiltrele(orijinalTatlar, "Çikolata");
 
 
 

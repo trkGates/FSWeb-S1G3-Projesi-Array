@@ -85,14 +85,6 @@ function cesitEkle(orijinalTatlar,string){
 
 }
 console.log("KAKULE EKLENDİ",cesitEkle(orijinalTatlar,"Kakule"));
-/*
-function cesitEkle(orijinalTatlar){
-orijinalTatlar.unshift("Kakule");
-return  orijinalTatlar;
-}
-console.log("KAKULE EKLENDİ",cesitEkle(orijinalTatlar));
-*/
-
 
 /* Cörev 4:
 
